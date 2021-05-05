@@ -44,12 +44,18 @@ body {
     text-decoration: none;
     margin-left: 15px;
 }
+.menu-btn {
+    display: none;
+}
 .main-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background: radial-gradient(rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.5) 80%,rgba(0, 0, 0, 0.2)), url(../img/1.jpg);
     background-repeat: no-repeat;
     color: #F4EBDB;
     text-align: center;
-    padding-top: 200px;
+   
     font-family: 'Oswald', sans-serif;
     background-size: cover;
     height: 90vh;
@@ -86,8 +92,13 @@ body {
     height: 50vh;
 }
 .about-text {
+    height: 100%;
     text-align: center;
-    padding: 30px 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 30px;
     color: #f4ebdb;
     font-family: 'Train One', cursive;
 }
@@ -121,12 +132,11 @@ body {
 }
 .advantages-container {
     margin: 0 auto;
-    padding-top: 20px;
     display: flex;
     flex-wrap: wrap;
-    width: 80%;
+    width: 100%;
     justify-content: center;
-    
+    align-items: center;
     height: 100vh;
 }
 .advantages-card {
@@ -140,6 +150,7 @@ body {
     padding: 10px;
     border-radius: 30px;
     text-align: center;
+    height: 300px;
 }
 .advantages-title {
     text-transform: uppercase;
@@ -164,12 +175,15 @@ body {
     background: radial-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7) 80%,rgba(0, 0, 0, 0.5)), url(../img/pricebg.jpeg);
     background-size: cover;
     background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
 /* общие параметры для всей таблицы */
 .price-table {
-    padding-top: 100px;
+    
     margin: 0px auto; /* отступ сверху и снизу от таблицы 10px, слева и справа 0 */
     width: 80%; /* ширина таблицы */
 }
@@ -255,7 +269,6 @@ body {
 }
 .list-btn {
     width: 325px;
-    margin-bottom: 20px;
     height: 40px;
     border-radius: 30px;
     padding: 0 20px;
@@ -280,7 +293,7 @@ body {
     color: #F4EBDB;
     align-items: center;
     justify-content: space-around;
-    max-width: 80vw;
+    max-width: 90vw;
     margin: 0 auto;
     font-family: 'Roboto Mono', monospace;
     line-height: 25px;
@@ -305,7 +318,7 @@ body {
 .swiper-slide {
     text-align: center;
     font-size: 18px;
-    background: #fff;
+    background: #2c4a52;
 
     /* Center slide text vertically */
     display: -webkit-box;
@@ -323,26 +336,325 @@ body {
 }
 
 
-@media (max-width: 1050px) {
-    .list-container {
-        padding-top: 10vh;
-        width: 600px;
-        margin: 0 auto;
-    }
-    .list-form input:first-child {
-        margin-right: 0;
-    }
-    .foot-container {
-        font-size: 15px;
-        width: 600px;
-    }
-    .company {
-        font-size: 13px;
-    }
-    .footer {
-        height: 30vh;
-    }
-    .list {
-        height: 70vh;
-    }
+@media (max-width: 1024px) {
+    /* First-Slide */
+        /* Header */
+        .menu {
+            display: none;
+        }
+        .menu-btn {
+            position: relative;
+            width: 40px;
+            height: 4px;
+            background-color: #F4EBDB;
+            display: block;
+            margin-right: 25px;
+        }
+        .menu-btn::after {
+            position: absolute;
+            content: "";
+            width: 40px;
+            height: 4px;
+            background-color: #F4EBDB;
+            left: 0px;
+            top: 0;
+            margin-top: 7px;
+        }
+        .menu-btn::before {
+            position: absolute;
+            content: "";
+            width: 40px;
+            height: 4px;
+            background-color: #F4EBDB;
+            left: 0px;
+            top: 0px;
+            margin-top: -7px;
+        }
+        /* MainPage */
+        .main-description {
+            margin: 0 30px;
+        }
+    /* Second-Slide */
+        .about-text h3 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 35px;
+            margin: 10px 0;
+        }
+        .about-text p {
+            color: #d0cbbb;
+            font-size: 15px;
+        }
+    /* Third-Slide */
+        .advantages-card {
+            width: 40vw;
+            height: 35vh;
+        }
+        .advantages-title {
+            text-transform: uppercase;
+            font-family: 'Oswald', sans-serif;
+            font-size: 22px;
+            color: #202820;
+            margin: 0px 0;
+        }
+        .advantages-description {
+            text-transform: uppercase;
+            font-family: 'Oswald', sans-serif;
+            font-size: 15px;
+            color: #334332;
+            margin-bottom: 20px;
+        }
+        .advantages-icon {
+            margin-top: 20px;
+        } 
+    /* Fourth-Slide */
+    /* Fifth-Slide */
+        .list-container {
+            padding-top: 10vh;
+            width: 600px;
+            margin: 0 auto;
+        }
+        .list-form input:first-child {
+            margin-right: 0;
+        }
+        .foot-container {
+            font-size: 15px;
+            line-height: 20px;
+            width: 600px;
+        }
+        .company {
+            font-size: 13px;
+        }
+        .footer {
+            height: 30vh;
+        }
+        .list {
+            height: 70vh;
+        }
+}
+@media (max-width:768px) {
+    /* First-Slide */
+        /* Header */
+        .logo {
+            width: 170px;
+        }
+        /* MainPage */
+        .main-description > .title {
+            font-size: 30px;
+        }
+        .main-description > .subtitle {
+            font-size: 15px;
+        }
+        .main-description button {
+            font-size: 17px;
+            width: 300px;
+            height: 45px;
+            margin-top: 10px;
+        }
+    /* Second-Slide */
+        .about-text-cont {
+            width: 100vw;
+            
+            
+        }
+        #about-text-cont1 {
+            background-image: radial-gradient(rgba(0, 0, 0, 0.9),rgba(0, 0, 0, 0.7) 80%,rgba(0, 0, 0, 0.5)), url(../img/about1.jpeg);
+            background-size: cover;
+        }
+        #about-text-cont2 {
+            background-image: radial-gradient(rgba(0, 0, 0, 0.9),rgba(0, 0, 0, 0.7) 80%,rgba(0, 0, 0, 0.5)), url(../img/about2.jpg);
+            background-size: cover;
+            border-top: solid 2px;
+        }
+        .about-text h3 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 35px;
+            margin: 5px 0;
+        }
+        .about-text p {
+            color: #d0cbbb;
+            font-size: 15px;
+        }
+        #about-image1 {
+            display: none;
+        }
+        #about-image2 {
+            display: none;
+        }
+    /* Third-Slide */
+        .advantages-card {
+            width: 40vw;
+            height: 35vh;
+            margin: 0 10px;
+        }
+        .advantages-title {
+            text-transform: uppercase;
+            font-family: 'Oswald', sans-serif;
+            font-size: 20px;
+            color: #202820;
+            margin: 0px 0;
+        }
+        .advantages-description {
+            text-transform: uppercase;
+            font-family: 'Oswald', sans-serif;
+            font-size: 13px;
+            color: #334332;
+            margin-bottom: 20px;
+        }
+        .advantages-icon {
+            margin-top: 20px;
+        }
+    /* Fourth-Slide */
+    /* Fifth-Slide */
+        .foot-container {
+            font-size: 13px;
+            width: 600px;
+            line-height: 17px;
+        }
+        .company {
+            font-size: 11px;
+        }
+        .list-form input {
+            height: 30px;
+            font-size: 15px;
+        }
+        .list-container button {
+            height: 30px;
+        }
+        .list-container {
+            width: 400px;
+        }
+}
+
+@media (max-width:420px) {
+    /* First-Slide */
+    /* Second-Slide */
+        .about-text h3 {
+            font-size: 30px;
+        }
+        .about-text p {
+            font-size: 13px;
+        }
+    /* Third-Slide */
+        .advantages-icon {
+            display: none;
+        }
+        .advantages-card {
+            width: 75vw;
+            height: 18vh;
+            margin: 0;
+        }
+        .advantages-title {
+            text-transform: uppercase;
+            font-family: 'Oswald', sans-serif;
+            font-size: 18px;
+            color: #202820;
+            margin: 0px 0;
+        }
+        .advantages-description {
+            text-transform: uppercase;
+            font-family: 'Oswald', sans-serif;
+            font-size: 11px;
+            color: #334332;
+            margin-bottom: 20px;
+        }
+        .advantages-icon {
+            margin-top: 20px;
+        }
+    /* Fourth-Slide */
+        .price-table th {
+            height: 40px;
+            font-size: 17px; /* размер шрифта заголовка */
+        }
+        .price-table td {
+            font-size: 14px; /* размер шрифта */
+            height: 30px;
+        }
+    /* Fifth-Slide */
+        .foot-container {
+            font-size: 11px;
+            width: 600px;
+            
+        }
+        .company {
+            font-size: 9px;
+        }
+        .list-form input {
+            height: 25px;
+            width: 200px;
+            font-size: 13px;
+            margin-bottom: 5px;
+            
+        }
+        .list-container button {
+            height: 25px;
+            width: 250px;
+            font-size: 13px;
+        }
+        .list-container {
+            width: 300px;
+        }
+        .list-container form h3{
+            font-size: 15px;
+        }
+}
+
+@media (max-width:340px) {
+    /* First-Slide */
+        /* Header */
+        .logo {
+            margin-left: 15px;
+            width: 150px;
+        }
+        /* MainPage */
+        .main-description > .title {
+            font-size: 25px;
+        }
+        .main-description > .subtitle {
+            font-size: 13px;
+        }
+        .main-description button {
+            font-size: 16px;
+            width: 230px;
+        }
+    /* Second-Slide */
+        .about-text h3 {
+            font-size: 25px;
+        }
+        .about-text p {
+            font-size: 11px;
+        }
+    /* Third-Slide */
+    /* Fourth-Slide */
+        .price-table th {
+            height: 40px;
+            font-size: 13px; /* размер шрифта заголовка */
+        }
+        .price-table td {
+            font-size: 10px; /* размер шрифта */
+            height: 30px;
+        }
+    /* Fifth-Slide */
+        .foot-container ul{
+            font-size: 11px;
+            padding: 0;
+        }
+        .company {
+            font-size: 9px;
+        }
+        .list-form input {
+            width: 160px;
+            font-size: 11px;
+            margin-bottom: 5px;   
+        }
+        .list-container button {
+            width: 200px;
+            font-size: 13px;
+        }
+        .list-container {
+            width: 250px;
+        }
+        .list-container form h3{
+            font-size: 13px;
+            margin-bottom: 0;
+        }
 }
